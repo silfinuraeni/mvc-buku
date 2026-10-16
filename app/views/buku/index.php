@@ -11,11 +11,11 @@
     <?php if (isset($_GET['status'])): ?>
         <div style="padding: 10px; margin-bottom: 15px; background: #e2f0d9; color: #385723; border: 1px solid #c8e1b7;">
             <?php
-            match ($_GET['status']) {
-                'success_add' => echo 'Data buku berhasil ditambahkan!',
-                'success_update' => echo 'Data buku berhasil diperbarui!',
-                'success_delete' => echo 'Data buku berhasil dihapus!',
-                default => echo 'Operasi berhasil.'
+            echo match ($_GET['status']) {
+                'success_add' => 'Data buku berhasil ditambahkan!',
+                'success_update' => 'Data buku berhasil diperbarui!',
+                'success_delete' => 'Data buku berhasil dihapus!',
+                default => 'Operasi berhasil.'
             };
             ?>
         </div>
